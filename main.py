@@ -23,6 +23,6 @@ def rate():
     return "need userId, entry id, and rated tags"
 
 @app.errorhandler(404)
-def handle_404():
+def handle_404(e):
     return "404 Error"
 
