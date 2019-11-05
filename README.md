@@ -1,4 +1,4 @@
-#Generic Rating System
+# Generic Rating System
 ## Part 1: Backend and Algorithm
 + Backend
 Flask + sqlite for prototype. To deploy, we can use either Gunicorn or Ngnix + wsgi.
