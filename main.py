@@ -1,7 +1,14 @@
 from flask import Flask
+from AOPWorkflow import AOPWorker, AOPRunner, AOPException
 
+import config
+import model
+
+workflows = {}
+
+# def initWorkflow():
+    
 app = Flask(__name__)
-
 @app.route('/', methods=['GET'])
 def index():
     return "Homepage"
@@ -26,3 +33,7 @@ def rate():
 def handle_404(e):
     return "404 Error"
 
+if __name__ == '__main__':
+    config.init()
+    model.connectDB()
+    app.run()

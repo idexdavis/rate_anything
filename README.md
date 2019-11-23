@@ -17,6 +17,57 @@ To make us more suitable for jobs, I(JiaYi Zhang) suggest we use React.js. Since
 	* User login/logout: Shall we force users to use their school email?
 	* Search a specific professor(entry): It should be hierarchical structure indexing all entries. Also, the visualization part could be creative and it's very important.
 	* Add a rate to an entry: Select or type in tags, then upload it to server.
+## Data Orgnization
+Prof table:
+keys: Prof Name, Courses, Tags(could be a onehot vector)
+
+Action table:
+Simply log all actions
+keys: User, Status(active, deprecated), Timestamp, Action, args
+
+Logs table:
+Log all requests
+User, Time, Operation
+
+TAG MAP:
+Encode all tags into one-hot encoding
+
+Tags
+Lecture:
+Detailed slides
+Over-simplifed slides
+
+Logical explaination
+Don't know what prof talking about
+
+Always ask students to ask question
+Don't care at all.
+
+Responsivness:
+Have Piazza(or campuswire etc)
+Use canvas discussion
+No discussion forum
+
+TA/Prof answer questions fast enough
+TA/prof merely answer questions only
+
+Lots of OH, can always find them.
+They skip OH.
+
+Communication:
+Prof can understand your question correctly.
+Prof's answer don't really answer the question.
+
+Homeworks:
+Clear instruction on what to do.
+Don't know where to start
+
+well explained grading rubric
+Let's hope prof will give a good grade
+
+HW is too hard, must work more than you should(units) to figure out.
+HW too easy, an afternoon is enough to kill it.
+
 ## Note:
 This document is full of subjective prejudice, please don't hesitate to contact me and discuss anything you don't agree with.
 My email: pkazhang@ucdavis.edu
