@@ -73,6 +73,24 @@ Homeworks:
 - HW is too hard, must work more than you should (units) to figure out.
 - HW too easy, an afternoon is enough to kill it.
 
+## Database Schema Design
+
++ User records
+  + email
+  + username
+  + hashed password
+  + uid
++ Action log
+  + uid
+  + action
+  + args
+  + time
++ Ratee
+  + ["TAG":count,...]
+  + [{"user":USER, "comment":comment},...]
+  + rid
+  + summary:{calculated metrics}
+
 ## Note:
 This document is full of subjective prejudice, please don't hesitate to contact me and discuss anything you don't agree with.
 My email: pkazhang@ucdavis.edu
