@@ -97,9 +97,10 @@ hr {
 
 .btn-start {
     display: inline-block;
+    width: 100px;
+    margin-left: 2rem;
     background-color: rosybrown;
     transition-duration: 0.3s;
-    
 }
 
 .btn-start:hover {
@@ -114,11 +115,8 @@ hr {
 
 .btn-lg {
     font-size: 1.38rem;
-    font-weight: 600;
-    height: 30px;
-    width: 100px;
+    font-weight: 600;  
     padding: .875rem;
-    margin-left: 2rem;
     border-radius: .3125rem;
 }
 
