@@ -2,6 +2,9 @@
 import React from 'react';
 import './App.css';
 import LogIn from './LogIn';
+import Home from './Home';
+import ProfessorInfo from './ProfessorInfo';
+import { FaUserCircle } from 'react-icons/fa';
 import {
   BrowserRouter,
   Switch,
@@ -13,14 +16,16 @@ import {
   Redirect
 } from "react-router-dom";
 
-const authInfo = {authenticated: false,
+const authInfo = {
+  authenticated: false,
   setAuth(isAuthenticated) {
     this.authenticated = isAuthenticated;
   },
-   userEmail: 'none',
+  userEmail: 'none',
   setEmail(email) {
     this.userEmail = email;
-  }};
+  }
+};
 
 class App extends React.Component {
   constructor(props) {
@@ -46,7 +51,7 @@ class App extends React.Component {
         });
       } else {
         res.json().then(data => {
-          this.setState({authenticated: true, userEmail: data.email});
+          this.setState({ authenticated: true, userEmail: data.email });
           console.log(this.state.userEmail + "in handling");
           console.log(this.state.authenticated);
         });
@@ -59,18 +64,17 @@ class App extends React.Component {
       <BrowserRouter>
         <div class="App">
           <nav class="navbar">
-            <Link to="/signup">
-              <div>
-                <h3 class="navitem">Sign Up</h3>
+              <div class="user-btn-box">
+                <button class="btn user-btn" ><FaUserCircle /></button>
               </div>
-            </Link>
           </nav>
           <hr />
           <Switch>
             <LogInRoute path="/login" control={this.state.authenticated}>
               <LogIn handleAuth={this.Authenticate} />
             </LogInRoute>
-            <Route path="/home" render={() => <Home userEmail={this.state.userEmail}/> } />
+            <Route path="/home" render={() => <Home userEmail={this.state.userEmail} />} />
+            <Route path="/professorinfo" render={() => <ProfessorInfo/ >}/>
             {/* {
                this.state.authenticated ?
                  <h1>sign out</h1> :
@@ -83,6 +87,8 @@ class App extends React.Component {
   }
 }
 
+// This customized route redirects to home page once the user successfully logged in and stays at /login
+// if an error occurs and displays the error message.
 function LogInRoute({ control, children, ...rest }) {
   console.log(control);
   return (
@@ -92,26 +98,19 @@ function LogInRoute({ control, children, ...rest }) {
         () => control ? (
           <Redirect to="/home" />
         ) : (
-          children
+            children
           )
       }
     />
   );
 }
 
-
-class Home extends React.Component {
+class Student extends React.Component {
   constructor(props) {
     super(props);
-  }
-
-  render() {
-    return (
-      <div class="App-header">
-        <p>Welcome, {this.props.userEmail}!</p>
-      </div>
-    );
+    this.state = {id: "12345"};
   }
 }
+
 
 export default App;

@@ -20,9 +20,9 @@ class LogIn extends React.Component {
           <img class="App-logo" src="logo192.png"></img>
           <p id="errMsg"/>
             <div class="input-group">
-              <label class="text-input-label" for="username">Email</label>
-              <div class="input-btn">
-                <input id="email" type="email" class="text-input" placeholder="user@institution.edu" />
+              <label class="input-label-g" for="username">Email</label>
+              <div class="input-btn-g">
+                <input id="email" type="email" class="email-input" placeholder="user@institution.edu" />
                 <button class="btn btn-lg btn-start" id="start" onClick={this.props.handleAuth}>Start</button>
               </div>
             </div>

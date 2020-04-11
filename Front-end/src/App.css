@@ -6,8 +6,10 @@ hr {
     height: 2px;
     border-width: 0;
     margin: 0;
-    background-color: rgba(255, 255, 255, .1);
+    background-color: rgba(44, 43, 43, 0.1);
 }
+
+button:focus {outline:0;}
 
 .App {
     background-color: #282c34;
@@ -16,7 +18,7 @@ hr {
 
 :root {
     --gray-lt: rgba(255, 255, 255, .5);
-
+    --gray-dk: #282c34;
 }
 
 .App-logo {
@@ -41,11 +43,13 @@ hr {
     color: white;
 }
 
+/* For nav bar */
 .navbar {
+    position: sticky;
     display: flex;
     flex-direction: row;
     margin: 0;
-    padding-left: 50px;
+    padding: 0px 50px;
     background-color: #282c34;
 }
 
@@ -53,6 +57,23 @@ hr {
     color: var(--gray-lt);
 }
 
+.navbar .user-btn-box {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.navbar .user-btn-box .user-btn {
+    display: flex;
+    align-items: center;
+    color: white;
+    background-color: var(--gray-dk);
+    border-width: 0;
+    font-size: 1.35rem;
+}
+
+/* For input area */
 @media screen and (min-width: 350px) {
     .input-group {
         position: relative;
@@ -70,7 +91,7 @@ hr {
   }
 
 
-.text-input {
+.email-input {
     display: block;
     height: 30px;
     width: 100%;
@@ -82,13 +103,13 @@ hr {
 }
 
 /* for text input and button combination*/
-.input-btn {
+.input-btn-g {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.text-input-label {
+.input-label-g {
     display: block;
     font-size: 1rem;
     font-weight: 600;

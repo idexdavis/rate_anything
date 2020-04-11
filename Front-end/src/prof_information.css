@@ -1,0 +1,41 @@
+#ProfInfo{
+	font-family: Helvetica, sans-serif;
+}
+#score{
+	font-size: 250%;
+	float: left;
+	font-weight: bold;
+	
+}
+#outof{
+	color: rgb(150, 150, 150);
+	float: left;
+	position: relative;
+	top:30px;
+}
+#rt_area{
+	position: relative;
+	overflow: hidden;
+	top: -60px;
+}
+#charts{
+float: left;
+	position: relative
+}
+#dtbase{
+color: rgb(150, 150, 150);
+	font-weight: bold;
+	position: relative;
+	top:-25px;
+}
+#myDiagramDiv{
+	width:400px;
+	height:150px;
+	background-color: #DAE4E4;
+}
+#container{
+	width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
